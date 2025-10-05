@@ -1,7 +1,8 @@
-resource "aws_instance" "webserver" {
-    ami = "ami-01b6d88af12965bb6"
-    instance_type = "t2.micro"
-    tags = {
-        "Name" = "webserver2"
-    }
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-test-bucketkushal7865123"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
 }
